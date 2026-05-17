@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Akhilesh Gowda K S — Computer Science Engineer, Full Stack & Generative AI Enthusiast." />
+  <meta name="author" content="Akhilesh Gowda K S" />
+  <title>Akhilesh Gowda K S — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Page loader -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p>Loading Portfolio…</p>
+  </div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Animated background particles -->
+  <canvas id="particles" class="particles"></canvas>
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">AG</span>
+        <span class="logo-text">Akhilesh<span>.dev</span></span>
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow"><span class="dot"></span> Available for opportunities</p>
+          <h1>Hi, I'm <span class="gradient-text">AKHILESH GOWDA K S</span></h1>
+          <h2 class="subtitle">Computer Science Engineer <span class="sep">|</span> Full Stack & Generative AI Enthusiast</h2>
+          <p class="typing-wrap">I'm a <span class="typed" id="typed"></span><span class="caret">|</span></p>
+          <div class="hero-buttons">
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fa-solid fa-file-lines"></i> View Resume
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/akhilag05" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/akhilesh-gowda-ks-a54a46209" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:ahkileshgowdaksag05@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+917204440191" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-ring">
+            <div class="photo-inner">
+              <img src="/assets/profile.jpg" alt="Akhilesh Gowda K S" onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=AG&backgroundColor=4f46e5&fontSize=42';this.onerror=null;" />
+            </div>
+            <span class="floating-chip chip-1"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="floating-chip chip-2"><i class="fa-solid fa-robot"></i> AI</span>
+            <span class="floating-chip chip-3"><i class="fa-solid fa-code"></i> Web</span>
+            <span class="floating-chip chip-4"><i class="fa-solid fa-database"></i> SQL</span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">About</p>
+          <h2 class="section-title">A bit <span class="gradient-text">about me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a passionate Computer Science Engineering student at <strong>P.E.S College of Engineering, Mandya</strong>, deeply interested in <strong>Full Stack Development</strong> and <strong>Generative AI</strong>. I love turning ideas into real-world software — from intuitive interfaces to intelligent backends.</p>
+            <p>I take pride in writing clean, scalable code and bringing leadership and collaboration to every team. My focus is on building solutions that actually solve problems for people.</p>
+            <ul class="about-list">
+              <li><i class="fa-solid fa-check"></i> Full Stack Web Development</li>
+              <li><i class="fa-solid fa-check"></i> Generative AI & Prompt Engineering</li>
+              <li><i class="fa-solid fa-check"></i> Team Leadership & Collaboration</li>
+              <li><i class="fa-solid fa-check"></i> Real-world Problem Solving</li>
+            </ul>
+          </div>
+          <div class="stats">
+            <div class="stat-card reveal"><h3 class="counter" data-target="10">0</h3><p>Projects Completed</p></div>
+            <div class="stat-card reveal"><h3 class="counter" data-target="20">0</h3><p>Skills Mastered</p></div>
+            <div class="stat-card reveal"><h3 class="counter" data-target="15">0</h3><p>Technologies</p></div>
+            <div class="stat-card reveal"><h3 class="counter" data-target="5">0</h3><p>Leadership Roles</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Skills</p>
+          <h2 class="section-title">What I <span class="gradient-text">work with</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-code"></i><h3>Programming Languages</h3></div>
+            <div class="bar"><span>Java</span><div class="track"><div class="fill" data-fill="90"></div></div></div>
+            <div class="bar"><span>C</span><div class="track"><div class="fill" data-fill="80"></div></div></div>
+            <div class="bar"><span>JavaScript</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-globe"></i><h3>Web Development</h3></div>
+            <div class="bar"><span>HTML</span><div class="track"><div class="fill" data-fill="95"></div></div></div>
+            <div class="bar"><span>CSS</span><div class="track"><div class="fill" data-fill="90"></div></div></div>
+            <div class="bar"><span>JavaScript</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+            <div class="bar"><span>REST API</span><div class="track"><div class="fill" data-fill="80"></div></div></div>
+            <div class="bar"><span>GUI Development</span><div class="track"><div class="fill" data-fill="75"></div></div></div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-server"></i><h3>Backend & APIs</h3></div>
+            <div class="bar"><span>Spring Boot</span><div class="track"><div class="fill" data-fill="80"></div></div></div>
+            <div class="bar"><span>API Development</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+            <div class="bar"><span>REST API</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-database"></i><h3>Database</h3></div>
+            <div class="bar"><span>SQL</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-toolbox"></i><h3>Tools & Platforms</h3></div>
+            <div class="bar"><span>Git</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+            <div class="bar"><span>GitHub</span><div class="track"><div class="fill" data-fill="90"></div></div></div>
+            <div class="bar"><span>Power BI</span><div class="track"><div class="fill" data-fill="70"></div></div></div>
+            <div class="bar"><span>Excel</span><div class="track"><div class="fill" data-fill="80"></div></div></div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-head"><i class="fa-solid fa-robot"></i><h3>Generative AI & Prompt Engineering</h3></div>
+            <div class="bar"><span>ChatGPT API Usage</span><div class="track"><div class="fill" data-fill="90"></div></div></div>
+            <div class="bar"><span>Prompt Engineering</span><div class="track"><div class="fill" data-fill="92"></div></div></div>
+            <div class="bar"><span>AI-assisted Development</span><div class="track"><div class="fill" data-fill="88"></div></div></div>
+            <div class="bar"><span>Prompt-based Content</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+            <div class="bar"><span>Multi-turn Conversations</span><div class="track"><div class="fill" data-fill="85"></div></div></div>
+            <div class="bar"><span>Role-based Prompting</span><div class="track"><div class="fill" data-fill="87"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Projects</p>
+          <h2 class="section-title">Featured <span class="gradient-text">work</span></h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Start-Up Idea Generator & Validator</h3>
+            <p>AI-powered tool that analyzes feasibility, market trends, demand, competition, and business models for new startup ideas.</p>
+            <div class="badges"><span>AI</span><span>Prompt Engineering</span><span>Web</span></div>
+            <a class="btn btn-outline" href="#" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art"><i class="fa-solid fa-microphone-lines"></i></div>
+            <h3>ROSE: AI-Driven Receptionist</h3>
+            <p>Python-based intelligent assistant for a Computer Centre using speech recognition, facial recognition, GUI, database integration, and automation.</p>
+            <div class="badges"><span>Python</span><span>Speech</span><span>Face Recognition</span><span>GUI</span></div>
+            <a class="btn btn-outline" href="#" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>Event Management System</h3>
+            <p>Responsive event scheduling and registration platform built with HTML, CSS, and JavaScript — clean UI and smooth UX.</p>
+            <div class="badges"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a class="btn btn-outline" href="#" target="_blank" rel="noopener">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Education</p>
+          <h2 class="section-title">My <span class="gradient-text">journey</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="t-item reveal">
+            <div class="t-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="t-content">
+              <span class="t-year">2022 – 2026</span>
+              <h3>B.E. in Computer Science & Engineering</h3>
+              <p>P.E.S College of Engineering, Mandya</p>
+            </div>
+          </div>
+          <div class="t-item reveal">
+            <div class="t-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="t-content">
+              <span class="t-year">2020 – 2022</span>
+              <h3>Senior Secondary Education</h3>
+              <p>Sadvidya PU College, Mandya</p>
+            </div>
+          </div>
+          <div class="t-item reveal">
+            <div class="t-icon"><i class="fa-solid fa-book"></i></div>
+            <div class="t-content">
+              <span class="t-year">Secondary</span>
+              <h3>Secondary Education</h3>
+              <p>Chinmaya English High School, Mandya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section class="section" id="hobbies">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Hobbies</p>
+          <h2 class="section-title">Beyond the <span class="gradient-text">code</span></h2>
+        </div>
+        <div class="hobbies-grid">
+          <div class="hobby reveal"><i class="fa-solid fa-baseball"></i><h4>Cricket</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-microchip"></i><h4>Tech Exploration</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-brain"></i><h4>AI Research</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-pen-ruler"></i><h4>UI/UX Design</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-laptop-code"></i><h4>Coding</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-video"></i><h4>Content Creation</h4></div>
+          <div class="hobby reveal"><i class="fa-solid fa-rocket"></i><h4>Emerging Tech</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="section" id="resume">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Resume</p>
+          <h2 class="section-title">My <span class="gradient-text">resume</span></h2>
+        </div>
+        <div class="resume-card reveal">
+          <div class="resume-icon"><i class="fa-solid fa-file-pdf"></i></div>
+          <div class="resume-info">
+            <h3>Akhilesh Gowda K S — Resume</h3>
+            <p>A snapshot of my education, skills, projects, and experience.</p>
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-eye"></i> View Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Contact</p>
+          <h2 class="section-title">Let's <span class="gradient-text">talk</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="info-row"><i class="fa-solid fa-phone"></i><div><h4>Phone</h4><a href="tel:+917204440191">+91 72044 40191</a></div></div>
+            <div class="info-row"><i class="fa-solid fa-envelope"></i><div><h4>Email</h4><a href="mailto:ahkileshgowdaksag05@gmail.com">ahkileshgowdaksag05@gmail.com</a></div></div>
+            <div class="info-row"><i class="fa-brands fa-linkedin"></i><div><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/akhilesh-gowda-ks-a54a46209" target="_blank" rel="noopener">akhilesh-gowda-ks</a></div></div>
+            <div class="info-row"><i class="fa-brands fa-github"></i><div><h4>GitHub</h4><a href="https://github.com/akhilag05" target="_blank" rel="noopener">akhilag05</a></div></div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="field"><label>Name</label><input type="text" name="name" required placeholder="Your full name" /></div>
+            <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@example.com" /></div>
+            <div class="field"><label>Message</label><textarea name="message" rows="5" required placeholder="Write your message..."></textarea></div>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo"><span class="logo-mark">AG</span><span class="logo-text">Akhilesh<span>.dev</span></span></a>
+        <p class="muted">Computer Science Engineer · Full Stack & GenAI Enthusiast.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="https://github.com/akhilag05" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/akhilesh-gowda-ks-a54a46209" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:ahkileshgowdaksag05@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Akhilesh Gowda K S · Made with <i class="fa-solid fa-heart heart"></i> by Akhilesh Gowda K S</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="/script.js"></script>
+</body>
+</html>
