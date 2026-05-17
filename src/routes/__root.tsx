@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Akhilesh Gowda K S portfolio" },
+      { name: "description", content: "A modern, responsive personal portfolio website showcasing skills, projects, and education." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Akhilesh Gowda K S portfolio" },
+      { property: "og:description", content: "A modern, responsive personal portfolio website showcasing skills, projects, and education." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Akhilesh Gowda K S portfolio" },
+      { name: "twitter:description", content: "A modern, responsive personal portfolio website showcasing skills, projects, and education." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2f08b7df-3593-4c6f-baab-55c7ad3af18e/id-preview-9a724fb3--01f07e89-6932-4457-a9a1-69c825a4ba57.lovable.app-1778987225163.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2f08b7df-3593-4c6f-baab-55c7ad3af18e/id-preview-9a724fb3--01f07e89-6932-4457-a9a1-69c825a4ba57.lovable.app-1778987225163.png" },
     ],
     links: [
       {
