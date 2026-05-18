@@ -130,7 +130,7 @@ form?.addEventListener('submit', (e) => {
   const data = new FormData(form);
   const subject = encodeURIComponent(`Portfolio message from ${data.get('name')}`);
   const body = encodeURIComponent(`${data.get('message')}\n\nFrom: ${data.get('name')} (${data.get('email')})`);
-  window.location.href = `mailto:ahkileshgowdaksag05@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:akhileshgowdaksag05@gmail.com?subject=${subject}&body=${body}`;
   formNote.textContent = 'Opening your mail client...';
   form.reset();
   setTimeout(() => formNote.textContent = '', 4000);
