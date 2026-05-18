@@ -10,24 +10,35 @@ window.addEventListener('load', () => {
 // ===== Year =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ===== Theme toggle =====
+// ===== Theme switcher (multi-theme) =====
+const themeSwitcher = document.getElementById('themeSwitcher');
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('i');
-const savedTheme = localStorage.getItem('theme') || 'dark';
-if (savedTheme === 'light') {
-  document.documentElement.setAttribute('data-theme', 'light');
-  themeIcon.className = 'fa-solid fa-sun';
+const themeOptions = document.querySelectorAll('.theme-option');
+
+function applyTheme(name) {
+  if (name === 'dark') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', name);
+  themeOptions.forEach(o => o.classList.toggle('active', o.dataset.themeValue === name));
+  localStorage.setItem('theme', name);
 }
-themeToggle.addEventListener('click', () => {
-  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  if (isLight) {
-    document.documentElement.removeAttribute('data-theme');
-    themeIcon.className = 'fa-solid fa-moon';
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    themeIcon.className = 'fa-solid fa-sun';
-    localStorage.setItem('theme', 'light');
+applyTheme(localStorage.getItem('theme') || 'dark');
+
+themeToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  themeSwitcher.classList.toggle('open');
+  themeToggle.setAttribute('aria-expanded', themeSwitcher.classList.contains('open'));
+});
+themeOptions.forEach(opt => {
+  opt.addEventListener('click', () => {
+    applyTheme(opt.dataset.themeValue);
+    themeSwitcher.classList.remove('open');
+    themeToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!themeSwitcher.contains(e.target)) {
+    themeSwitcher.classList.remove('open');
+    themeToggle.setAttribute('aria-expanded', 'false');
   }
 });
 
@@ -68,7 +79,26 @@ document.getElementById('toTop').addEventListener('click', () => {
 });
 
 // ===== Typing effect =====
-const words = ['Java Developer', 'Frontend Developer', 'Prompt Engineer', 'AI Enthusiast', 'REST API Developer'];
+const words = [
+  'Java Developer',
+  'Full Stack Developer',
+  'Frontend Developer',
+  'Backend Developer',
+  'Spring Boot Developer',
+  'REST API Developer',
+  'JavaScript Developer',
+  'HTML & CSS Developer',
+  'C Programmer',
+  'SQL Developer',
+  'GUI Developer',
+  'Git & GitHub User',
+  'Power BI Analyst',
+  'Excel Power User',
+  'Generative AI Enthusiast',
+  'Prompt Engineer',
+  'AI-assisted Developer',
+  'ChatGPT API Developer'
+];
 const typedEl = document.getElementById('typed');
 let wi = 0, ci = 0, deleting = false;
 function type() {
